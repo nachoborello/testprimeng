@@ -1,0 +1,9 @@
+<main class="ui-g">
+  <div *ngFor="let app of menu" class="ui-lg-3 ui-sm-12 ui-md-6 app-container">
+    <p-card title="{{app.name}}">
+        {{app.label}}<br>
+      {{app.icon}}<br>
+      <p-button label="Click" [routerLink]="'/'+app.url"></p-button>
+    </p-card>
+  </div>
+</main>

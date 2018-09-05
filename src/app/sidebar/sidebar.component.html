@@ -1,0 +1,20 @@
+<!-- <div class="sidebar" [hidden]="!app.showSideBar">
+  
+</div> -->
+
+<p-sidebar [(visible)]="app.showSideBar" [(showCloseIcon)]="False">
+  <ul class="item-list">
+    <li class="user-options">
+        <a class="option left" (click)="goBack()"><i class="material-icons">arrow_back</i></a>
+        <a class="option right icon"><i class="material-icons" (click)="menu.toggle($event)">account_circle</i></a>
+        <p-menu #menu [popup]="true" [model]="userActions"></p-menu>
+
+    </li>
+    <li *ngFor="let tool of tools" class="option">
+      <a [routerLink]="appurl+'/'+tool.url">
+        <div class="icon"><i class="material-icons">{{tool.icon}}</i></div>
+        <div class="link"><span>{{tool.name}}</span></div>
+      </a>
+    </li>
+  </ul>
+</p-sidebar>

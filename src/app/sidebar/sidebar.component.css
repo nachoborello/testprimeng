@@ -1,0 +1,64 @@
+.sidebar{
+    z-index: 9990;
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    width: 19rem;
+    float: left;
+    height: 100%;
+    background-color: white;
+    border-right: 1px solid rgb(216, 216, 216);
+}
+ul{
+    list-style: none;
+    padding: 0rem;
+    margin: 0rem;
+}
+li.user-options{
+    padding: 0rem;
+    margin-bottom: .2rem;
+    height: 4rem;
+    background-color: #EBBB4E; 
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+li.option{
+    padding: 1rem 1rem 1rem 2.5rem;
+}
+li.option:hover{
+    background-color: rgb(230, 230, 230);
+
+}
+.link{
+    padding: 0rem 1rem;
+    position: relative;
+    top: -5px;
+    display: inline-block;
+}
+.icon{
+    display: inline-block;
+}
+a.option{
+    cursor: pointer;
+    color: #333333;
+    height: 64px;
+    line-height: 4rem;
+    font-size: 1.7rem;
+    position: relative;
+    display: inline-block;
+}
+
+a.option.right{
+    float: right;
+    right: 1rem;
+}
+a.option.left{
+    float: left;
+    left: 1rem;
+}
+a.option i{
+    font-size: 2rem;
+}
+a.option.icon{
+    line-height: 4.8rem !important;
+}

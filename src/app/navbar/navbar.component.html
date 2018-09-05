@@ -1,0 +1,5 @@
+<nav>
+  <a class="option left icon" [hidden]="!app.showMenuToggle" (click)="toggleSideBar()"><i class="material-icons">menu</i></a>
+  <a class="option right icon"><i class="material-icons" (click)="menu.toggle($event)">account_circle</i></a>
+  <p-menu #menu [popup]="true" [model]="items"></p-menu>
+</nav>
