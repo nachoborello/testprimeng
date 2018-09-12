@@ -1,9 +1,13 @@
-<main class="ui-g">
+<main class="ui-g">  
   <div *ngFor="let app of menu" class="ui-lg-3 ui-sm-12 ui-md-6 app-container">
-    <p-card title="{{app.name}}">
-        {{app.label}}<br>
-      {{app.icon}}<br>
-      <p-button label="Click" [routerLink]="'/'+app.url"></p-button>
+    <p-card title="{{'tools.'+app.name | translate}}" class="center">
+      <a [routerLink]="'/'+app.url"><img src="assets/img/{{app.icon}}.png"></a>
+    </p-card>
+  </div>
+
+  <div class="ui-lg-3 ui-sm-12 ui-md-6 app-container">
+    <p-card title="Idioma" class="center">
+        <a (click)="cicleLang()"><h1>{{lang}}</h1></a>
     </p-card>
   </div>
 </main>

@@ -2,8 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpClient, HttpClientModule }    from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 //store
 import { StoreModule } from './store/store.module';
 // import { StoreHomeComponent } from './store/store-home/store-home.component';
@@ -21,6 +24,7 @@ import { ButtonModule } from 'primeng/components/button/button';
 import { MenuModule } from 'primeng/menu';
 import { CardModule } from 'primeng/card';
 import { SidebarModule } from 'primeng/sidebar';
+
 
 @NgModule({
   declarations: [
@@ -40,9 +44,21 @@ import { SidebarModule } from 'primeng/sidebar';
     ButtonModule,
     MenuModule,
     CardModule,
-    SidebarModule
+    SidebarModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// required for AOT compilation
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

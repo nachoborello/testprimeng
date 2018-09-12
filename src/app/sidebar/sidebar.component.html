@@ -2,7 +2,7 @@
   
 </div> -->
 
-<p-sidebar [(visible)]="app.showSideBar" [(showCloseIcon)]="False">
+<p-sidebar [(visible)]="app.showSideBar" [showCloseIcon]="false">
   <ul class="item-list">
     <li class="user-options">
         <a class="option left" (click)="goBack()"><i class="material-icons">arrow_back</i></a>
@@ -13,7 +13,7 @@
     <li *ngFor="let tool of tools" class="option">
       <a [routerLink]="appurl+'/'+tool.url">
         <div class="icon"><i class="material-icons">{{tool.icon}}</i></div>
-        <div class="link"><span>{{tool.name}}</span></div>
+        <div class="link"><span>{{'tools.'+tool.name | translate}}</span></div>
       </a>
     </li>
   </ul>

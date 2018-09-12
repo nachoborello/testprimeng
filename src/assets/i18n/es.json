@@ -1,0 +1,25 @@
+{
+    "demo": {
+        "title": "Translation demo",
+        "text": "This is a simple demonstration app for ngx-translate"
+    },
+
+    "tools":{
+        "STORE": "Store",
+        "PRODUCTOS": "Cambio de precios",
+        "AUDITORIAS_STOCK": "Auditorias de stock",
+        "PEDIDOS": "Preventa",
+        "DEPOSITO": "Deposito",
+        "PLANILLA_CARGA": "Planilla de carga",
+        "MODIFICACION_ITEMS_NP": "Modificación notas pedido",
+        "FACTURACION_NP": "Facturación notas pedido",
+        "INGRESO_MERCADERIA": "Ingreso de mercadería",
+        "COLECTOR": "Colector",
+        "PICKUP": "Pickup"
+    },
+
+    "session":{
+        "OPCIONES": "Opciones",
+        "LOGOUT": "Cerrar Sesión"
+    }
+}

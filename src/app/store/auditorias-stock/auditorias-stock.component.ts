@@ -9,7 +9,10 @@ export class AuditoriasStockComponent implements OnInit {
 
   constructor() { }
 
+  dateTime: Date;
+
   ngOnInit() {
+    this.dateTime = new Date();
   }
 
 }
